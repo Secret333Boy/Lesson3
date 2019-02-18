@@ -12,11 +12,11 @@
 	3б. напечатать самое длинное слово
 	3в. Поменять первую и последнюю букву в слове
 
-4. Дана строка содержащая и цифры и буквы. 
+5. Дана строка содержащая и цифры и буквы. 
 	4а. Удалить все цифры
 	4б. Удалить все буквы
 
-5. Удалить из строки все сдвоенные буквы в слове*/
+6. Удалить из строки все сдвоенные буквы в слове*/
 
 /*1*/
 // var string = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia, rem animi minus vitae labore quos velit blanditiis reiciendis ratione accusamus, facere veritatis, aliquid, inventore accusantium cum facilis perferendis voluptate. ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vero eligendi quo sed sunt autem laborum hic neque eos? Impedit saepe minima optio eaque veniam sed ea suscipit, id consectetur? ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe error, harum, nesciunt fugit inventore minima laudantium molestias veritatis et repellat natus dignissimos sapiente eos illum illo obcaecati maxime magnam. ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptatem tenetur molestias labore velit cupiditate voluptas quo pariatur sunt quisquam, ipsum vero adipisci, laboriosam incidunt ab quidem neque officia assumenda. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia, rem animi minus vitae labore quos velit blanditiis reiciendis ratione accusamus, facere veritatis, aliquid, inventore accusantium cum facilis perferendis voluptate. ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vero eligendi quo sed sunt autem laborum hic neque eos? Impedit saepe minima optio eaque veniam sed ea suscipit, id consectetur? ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe error, harum, nesciunt fugit inventore minima laudantium molestias veritatis et repellat natus dignissimos sapiente eos illum illo obcaecati maxime magnam. ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptatem tenetur molestias labore velit cupiditate voluptas quo pariatur sunt quisquam, ipsum vero adipisci, laboriosam incidunt ab quidem neque officia assumenda. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia, rem animi minus vitae labore quos velit blanditiis reiciendis ratione accusamus, facere veritatis, aliquid, inventore accusantium cum facilis perferendis voluptate. ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vero eligendi quo sed sunt autem laborum hic neque eos? Impedit saepe minima optio eaque veniam sed ea suscipit, id consectetur? ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe error, harum, nesciunt fugit inventore minima laudantium molestias veritatis et repellat natus dignissimos sapiente eos illum illo obcaecati maxime magnam. ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptatem tenetur molestias labore velit cupiditate voluptas quo pariatur sunt quisquam, ipsum vero adipisci, laboriosam incidunt ab quidem neque officia assumenda.";
@@ -51,11 +51,13 @@
 // var count_replace = 0;
 // for (var i = 0; i < string.length; i++) {
 // 	if (string[i] == " " && string[i+1] == " ") {
+// 		string = string.slice(0, i) + string.substring(i+1, string.length);
+// 		i--;
 // 		count_replace++;
-// 		string[i] = ""; //В этом месте не присваивается значение символу
 // 	}
 // }
-// console.log(`${count_replace} symbol(s) were changed\n\n`, string);
+// console.log(`${count_replace} symbol(s) were changed\n\n`);
+// console.log(string);
 
 /*4*/
 // var string = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia, rem animi minus vitae labore quos velit blanditiis reiciendis ratione accusamus, facere veritatis, aliquid, inventore accusantium cum facilis perferendis voluptate. ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vero eligendi quo sed sunt autem laborum hic neque eos? Impedit saepe minima optio eaque veniam sed ea suscipit, id consectetur? ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe error, harum, nesciunt fugit inventore minima laudantium molestias veritatis et repellat natus dignissimos sapiente eos illum illo obcaecati maxime magnam. ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptatem tenetur molestias labore velit cupiditate voluptas quo pariatur sunt quisquam, ipsum vero adipisci, laboriosam incidunt ab quidem neque officia assumenda. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia, rem animi minus vitae labore quos velit blanditiis reiciendis ratione accusamus, facere veritatis, aliquid, inventore accusantium cum facilis perferendis voluptate. ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vero eligendi quo sed sunt autem laborum hic neque eos? Impedit saepe minima optio eaque veniam sed ea suscipit, id consectetur? ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe error, harum, nesciunt fugit inventore minima laudantium molestias veritatis et repellat natus dignissimos sapiente eos illum illo obcaecati maxime magnam. ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptatem tenetur molestias labore velit cupiditate voluptas quo pariatur sunt quisquam, ipsum vero adipisci, laboriosam incidunt ab quidem neque officia assumenda. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia, rem animi minus vitae labore quos velit blanditiis reiciendis ratione accusamus, facere veritatis, aliquid, inventore accusantium cum facilis perferendis voluptate. ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vero eligendi quo sed sunt autem laborum hic neque eos? Impedit saepe minima optio eaque veniam sed ea suscipit, id consectetur? ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe error, harum, nesciunt fugit inventore minima laudantium molestias veritatis et repellat natus dignissimos sapiente eos illum illo obcaecati maxime magnam. ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptatem tenetur molestias labore velit cupiditate voluptas quo pariatur sunt quisquam, ipsum vero adipisci, laboriosam incidunt ab quidem neque officia assumenda.";
@@ -75,5 +77,28 @@
 // result = `${last}${word[1]}${word[2]}${word[3]}${first}`
 // console.log(`Всего ${words.length} слов(o)\n`, `${L} слов(а) начинается с буквы L\n`,`Самое длинное слово: ${longest}\n`, `Слово ${word} изменено на ${result}`);
 
-
 /*5*/
+// var string = "ksdmf8sdf98qw98382q9fh932882r239f3";
+// var num = [], letter = [];
+// for (var i = 0; i < string.length; i++) {
+// 	if(string.charCodeAt(i)<100){
+// 		num = num + string[i];
+// 	}
+// 	else if(string.charCodeAt(i)>=100){
+// 		letter = letter + string[i];
+// 	}
+// }
+// console.log(num);
+// console.log(letter);
+
+/*6*/
+// var string = "LLorem ipsum dolorr sit amet, consectetur adipisicing elit. Veniam quia, rem animi minus vitae labore quos velit blanditiis reiciendis ratione accusamus, facere veritatis, aliquid, inventore accusantium cum facilis perferendis voluptate. ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vero eligendi quo sed sunt autem laborum hic neque eos? Impedit saepe minima optio eaque veniam sed ea suscipit, id consectetur? ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe error, harum, nesciunt fugit inventore minima laudantium molestias veritatis et repellat natus dignissimos sapiente eos illum illo obcaecati maxime magnam. ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptatem tenetur molestias labore velit cupiditate voluptas quo pariatur sunt quisquam, ipsum vero adipisci, laboriosam incidunt ab quidem neque officia assumenda. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia, rem animi minus vitae labore quos velit blanditiis reiciendis ratione accusamus, facere veritatis, aliquid, inventore accusantium cum facilis perferendis voluptate. ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vero eligendi quo sed sunt autem laborum hic neque eos? Impedit saepe minima optio eaque veniam sed ea suscipit, id consectetur? ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe error, harum, nesciunt fugit inventore minima laudantium molestias veritatis et repellat natus dignissimos sapiente eos illum illo obcaecati maxime magnam. ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptatem tenetur molestias labore velit cupiditate voluptas quo pariatur sunt quisquam, ipsum vero adipisci, laboriosam incidunt ab quidem neque officia assumenda. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia, rem animi minus vitae labore quos velit blanditiis reiciendis ratione accusamus, facere veritatis, aliquid, inventore accusantium cum facilis perferendis voluptate. ipsum dolor sit amet, consectetur adipisicing elit. Ducimus vero eligendi quo sed sunt autem laborum hic neque eos? Impedit saepe minima optio eaque veniam sed ea suscipit, id consectetur? ipsum dolor sit amet, consectetur adipisicing elit. Praesentium saepe error, harum, nesciunt fugit inventore minima laudantium molestias veritatis et repellat natus dignissimos sapiente eos illum illo obcaecati maxime magnam. ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptatem tenetur molestias labore velit cupiditate voluptas quo pariatur sunt quisquam, ipsum vero adipisci, laboriosam incidunt ab quidem neque officia assumenda.";
+// var count = 0;
+// for (var i = 0; i < string.length; i++) {
+// 	if (string[i] == string[i+1]) {
+// 		string = string.slice(0, i) + string.substring(i+1, string.length);
+// 		i--;
+// 		count++;
+// 	}
+// }
+// console.log(`${count} symbols were delated\n\n`, string);
